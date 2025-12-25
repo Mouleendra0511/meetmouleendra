@@ -9,7 +9,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="font-display text-2xl font-bold gradient-text">
-              Mouleendra
+              M
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
               B.Tech CSE student passionate about Machine Learning, AI, and building impactful solutions.
@@ -20,12 +20,24 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="font-display font-semibold text-foreground">Quick Links</h4>
             <div className="grid grid-cols-2 gap-2 text-sm">
-              <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About</Link>
-              <Link to="/skills" className="text-muted-foreground hover:text-primary transition-colors">Skills</Link>
-              <Link to="/experience" className="text-muted-foreground hover:text-primary transition-colors">Experience</Link>
-              <Link to="/projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</Link>
-              <Link to="/education" className="text-muted-foreground hover:text-primary transition-colors">Education</Link>
-              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link>
+              <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                About
+              </Link>
+              <Link to="/skills" className="text-muted-foreground hover:text-primary transition-colors">
+                Skills
+              </Link>
+              <Link to="/experience" className="text-muted-foreground hover:text-primary transition-colors">
+                Experience
+              </Link>
+              <Link to="/projects" className="text-muted-foreground hover:text-primary transition-colors">
+                Projects
+              </Link>
+              <Link to="/education" className="text-muted-foreground hover:text-primary transition-colors">
+                Education
+              </Link>
+              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                Contact
+              </Link>
             </div>
           </div>
 
