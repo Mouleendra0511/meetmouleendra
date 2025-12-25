@@ -20,7 +20,7 @@ const Skills = () => {
       skills: [
         { name: "TensorFlow", level: 90 },
         { name: "PyTorch", level: 85 },
-        { name: "Scikit-learn", level: 95 },
+        { name: "Scikit-learn", level: 90 },
         { name: "OpenCV", level: 85 },
         { name: "Generative AI", level: 80 },
       ],

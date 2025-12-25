@@ -31,6 +31,20 @@ const Experience = () => {
       ],
       technologies: ["PyTorch", "Knowledge Distillation", "Computer Vision", "Deep Learning"],
     },
+    {
+      title: "Offline Chatbot for DRDO Missiles",
+      company: "DRDO",
+      location: "Onsite",
+      duration: "May 2025 – July 2025",
+      type: "Internship",
+      description: "A NLP Project",
+      achievements: [
+        "Implemented an offline Retrieval-Augmented Generation (RAG) system on missile-related technical documents for secure question–answering",
+        "Used FAISS vector database for efficient document embedding and retrieval in a restricted, no-internet environment",
+        "Integrated Ollama for local LLM inference, ensuring data confidentiality while generating accurate, context-aware responses",
+      ],
+      technologies: ["RAG", "FAISS", "Ollama", "NLP", "LLMs"],
+    },
   ];
 
   const responsibilities = [
@@ -112,10 +126,7 @@ const Experience = () => {
                     {/* Technologies */}
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 rounded-lg bg-secondary text-sm font-medium"
-                        >
+                        <span key={tech} className="px-3 py-1 rounded-lg bg-secondary text-sm font-medium">
                           {tech}
                         </span>
                       ))}
