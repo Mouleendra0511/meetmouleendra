@@ -21,7 +21,7 @@ const About = () => {
     {
       icon: Users,
       title: "Leadership",
-      description: "Head of Design at Women Leaders Forum",
+      description: "Director of Learning and Enablement and Head of Operations in GitHub",
     },
   ];
 
@@ -42,13 +42,18 @@ const About = () => {
       description: "Joined GITAM University for CSE",
     },
     {
+      year: "2023",
+      title: "Smart India Hackathon 2023",
+      description: "Led team to pre-final rounds as captain",
+    },
+    {
       year: "2024",
       title: "ML Internship",
       description: "Worked at RINL on CO emission prediction",
     },
     {
       year: "2024",
-      title: "Smart India Hackathon",
+      title: "Smart India Hackathon 2024",
       description: "Led team to pre-final rounds as captain",
     },
     {
@@ -56,16 +61,18 @@ const About = () => {
       title: "Intel Unnati",
       description: "Image Sharpening project with Knowledge Distillation",
     },
+    {
+      year: "2025",
+      title: "DRDO Intern",
+      description: "Implemented a offline chatbot on DRDO missiles",
+    },
   ];
 
   return (
     <div className="min-h-screen pt-24">
       <section className="section-padding">
         <div className="container-main">
-          <SectionTitle
-            title="About Me"
-            subtitle="Get to know me better - my journey, passions, and what drives me"
-          />
+          <SectionTitle title="About Me" subtitle="Get to know me better - my journey, passions, and what drives me" />
 
           {/* Bio Section */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
@@ -91,20 +98,19 @@ const About = () => {
                 <span>Visakhapatnam, India</span>
               </div>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                I'm a passionate Computer Science student at GITAM University, specializing in 
-                Machine Learning and Full-Stack Development. With a strong foundation in Python, 
-                TensorFlow, and modern web technologies, I love building intelligent systems that 
-                solve real-world problems.
+                I'm a passionate Computer Science student at GITAM University, specializing in Machine Learning and
+                Full-Stack Development. With a strong foundation in Python, TensorFlow, and modern web technologies, I
+                love building intelligent systems that solve real-world problems.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                My journey includes impactful internships at RINL and Intel Unnati, where I 
-                developed ML models achieving 92% accuracy and created image sharpening solutions 
-                using knowledge distillation techniques. I thrive in collaborative environments 
-                and have led teams in prestigious competitions like the Smart India Hackathon.
+                My journey includes impactful internships at RINL and Intel Unnati, where I developed ML models
+                achieving 92% accuracy and created image sharpening solutions using knowledge distillation techniques. I
+                thrive in collaborative environments and have led teams in prestigious competitions like the Smart India
+                Hackathon.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Beyond coding, I serve as Head of Design at Women Leaders Forum and Head of 
-                Operations at GitHub Community, where I contribute to building inclusive tech communities.
+                Beyond coding, I serve as Head of Design at Women Leaders Forum and Head of Operations at GitHub
+                Community, where I contribute to building inclusive tech communities.
               </p>
             </div>
           </div>

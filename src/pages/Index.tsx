@@ -21,18 +21,17 @@ const Index = () => {
           {/* Main Heading */}
           <div className="space-y-4 animate-fade-in-up animation-delay-100">
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Hi, I'm{" "}
-              <span className="gradient-text">Mouleendra</span>
+              Hi, I'm <span className="gradient-text">Mouleendra</span>
             </h1>
             <p className="font-display text-xl sm:text-2xl md:text-3xl text-muted-foreground font-medium">
-              Machine Learning Engineer & Full Stack Developer
+              Machine Learning Engineer,AI Developer, Data Engineer
             </p>
           </div>
 
           {/* Description */}
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
-            B.Tech CSE student at GITAM University with expertise in ML, AI, and building 
-            intelligent systems. Passionate about solving real-world problems with technology.
+            B.Tech CSE student at GITAM University with expertise in ML, AI, and building intelligent systems.
+            Passionate about solving real-world problems with technology.
           </p>
 
           {/* CTA Buttons */}
@@ -103,7 +102,6 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { value: "9.33", label: "CGPA" },
-              { value: "92%", label: "ML Model Accuracy" },
               { value: "2+", label: "Internships" },
               { value: "5+", label: "Projects" },
             ].map((stat, index) => (
@@ -112,12 +110,8 @@ const Index = () => {
                 className="text-center space-y-2 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <p className="font-display text-3xl md:text-4xl font-bold gradient-text">
-                  {stat.value}
-                </p>
-                <p className="text-muted-foreground text-sm md:text-base">
-                  {stat.label}
-                </p>
+                <p className="font-display text-3xl md:text-4xl font-bold gradient-text">{stat.value}</p>
+                <p className="text-muted-foreground text-sm md:text-base">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -127,13 +121,19 @@ const Index = () => {
       {/* Featured Skills Preview */}
       <section className="section-padding">
         <div className="container-main text-center space-y-8">
-          <h2 className="font-display text-2xl md:text-3xl font-bold">
-            Technologies I Work With
-          </h2>
+          <h2 className="font-display text-2xl md:text-3xl font-bold">Technologies I Work With</h2>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {[
-              "Python", "TensorFlow", "PyTorch", "JavaScript", "React", 
-              "Node.js", "AWS", "OpenCV", "Generative AI", "SQL"
+              "Python",
+              "TensorFlow",
+              "PyTorch",
+              "Scikit Learn",
+              "RAG",
+              "YOLO",
+              "AWS",
+              "OpenCV",
+              "Generative AI",
+              "SQL",
             ].map((tech, index) => (
               <span
                 key={tech}
