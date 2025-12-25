@@ -20,7 +20,7 @@ const Skills = () => {
       skills: [
         { name: "TensorFlow", level: 90 },
         { name: "PyTorch", level: 85 },
-        { name: "Scikit-learn", level: 90 },
+        { name: "Scikit-learn", level: 95 },
         { name: "OpenCV", level: 85 },
         { name: "Generative AI", level: 80 },
       ],
@@ -50,9 +50,14 @@ const Skills = () => {
   ];
 
   const softSkills = [
-    "Leadership", "Team Collaboration", "Problem Solving", 
-    "Communication", "Project Management", "Critical Thinking",
-    "Adaptability", "Time Management"
+    "Leadership",
+    "Team Collaboration",
+    "Problem Solving",
+    "Communication",
+    "Project Management",
+    "Critical Thinking",
+    "Adaptability",
+    "Time Management",
   ];
 
   const techStack = [
@@ -128,9 +133,7 @@ const Skills = () => {
                   className="group glass-card px-5 py-3 hover:border-primary/50 transition-all duration-300 animate-fade-in-up"
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
-                  <span className="font-medium group-hover:text-primary transition-colors">
-                    {tech.name}
-                  </span>
+                  <span className="font-medium group-hover:text-primary transition-colors">{tech.name}</span>
                   <span className="ml-2 text-xs text-muted-foreground px-2 py-0.5 rounded-full bg-secondary">
                     {tech.category}
                   </span>
