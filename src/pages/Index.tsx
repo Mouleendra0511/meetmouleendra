@@ -24,7 +24,7 @@ const Index = () => {
               Hi, I'm <span className="gradient-text">Mouleendra</span>
             </h1>
             <p className="font-display text-xl sm:text-2xl md:text-3xl text-muted-foreground font-medium">
-              Machine Learning Engineer,AI Developer, Data Engineer
+              Machine Learning Engineer, AI Developer & Data Engineer
             </p>
           </div>
 
@@ -102,9 +102,8 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { value: "9.33", label: "CGPA" },
-              { value: "3+", label: "Internships" },
-              { value: "20+", label: "Projects" },
-              { value: "3+", label: "Clubs" },
+              { value: "2+", label: "Internships" },
+              { value: "5+", label: "Projects" },
             ].map((stat, index) => (
               <div
                 key={index}
