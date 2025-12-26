@@ -9,7 +9,7 @@ export const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="font-display text-2xl font-bold gradient-text">
-              M
+              Mouleendra
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs">
               B.Tech CSE student passionate about Machine Learning, AI, and building impactful solutions.

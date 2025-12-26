@@ -11,7 +11,7 @@ const About = () => {
     {
       icon: Briefcase,
       title: "Experience",
-      description: "ML Intern at RINL & Intel Unnati",
+      description: "ML Intern at RINL, Intel Unnati & DRDO",
     },
     {
       icon: Award,
@@ -21,7 +21,7 @@ const About = () => {
     {
       icon: Users,
       title: "Leadership",
-      description: "Director of Learning and Enablement and Head of Operations in GitHub",
+      description: "Director of Learning and Enablement in AWS and Head of Operations in GitHub",
     },
   ];
 
