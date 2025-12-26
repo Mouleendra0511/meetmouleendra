@@ -41,6 +41,18 @@ const Education = () => {
       date: "June 2025",
       icon: "🤖",
     },
+    {
+      title: "OCI Generative AI",
+      issuer: "Oracle University",
+      date: "October 2025",
+      icon: "⭕",
+    },
+    {
+      title: "OCI AI Foundations Associate",
+      issuer: "Oracle University",
+      date: "October 2025",
+      icon: "⭕",
+    },
   ];
 
   const achievements = [
