@@ -1,5 +1,6 @@
-import { User, MapPin, GraduationCap, Briefcase, Award, Users } from "lucide-react";
+import { MapPin, GraduationCap, Briefcase, Award, Users } from "lucide-react";
 import { SectionTitle } from "@/components/SectionTitle";
+import profileImage from "@/assets/profile.jpeg";
 
 const About = () => {
   const highlights = [
@@ -83,10 +84,12 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             {/* Profile Image Placeholder */}
             <div className="relative animate-fade-in-up">
-              <div className="aspect-square max-w-md mx-auto rounded-2xl overflow-hidden glass-card p-1">
-                <div className="w-full h-full rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                  <User className="w-32 h-32 text-primary/50" />
-                </div>
+              <div className="aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden glass-card p-1">
+                <img 
+                  src={profileImage} 
+                  alt="Aithi Aditya Sai Mouleendra" 
+                  className="w-full h-full rounded-xl object-cover object-top"
+                />
               </div>
               {/* Decorative elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
