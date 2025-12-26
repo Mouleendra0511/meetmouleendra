@@ -104,6 +104,7 @@ const Index = () => {
               { value: "9.33", label: "CGPA" },
               { value: "2+", label: "Internships" },
               { value: "5+", label: "Projects" },
+              { value: "3+", label: "Clubs" },
             ].map((stat, index) => (
               <div
                 key={index}
