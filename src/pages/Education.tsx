@@ -39,7 +39,7 @@ const Education = () => {
       title: "AWS Academy Machine Learning Foundations",
       issuer: "AWS Academy Graduate",
       date: "June 2025",
-      icon: "🤖",
+      icon: "☁️",
     },
     {
       title: "OCI Generative AI",
