@@ -66,6 +66,11 @@ const About = () => {
       title: "DRDO Intern",
       description: "Implemented a offline chatbot on DRDO missiles",
     },
+    {
+      year: "2025",
+      title: "Revive EcoTech Intern",
+      description: "Implemented AI voice call agent",
+    },
   ];
 
   return (

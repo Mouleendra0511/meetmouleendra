@@ -45,6 +45,20 @@ const Experience = () => {
       ],
       technologies: ["RAG", "FAISS", "Ollama", "NLP", "LLMs"],
     },
+    {
+      title: "AI-Powered Voice Support Agent",
+      company: "Revive EcoTech",
+      location: "Remote",
+      duration: "May 2025",
+      type: "Project Internship",
+      description: "Voice AI / Conversational Systems",
+      achievements: [
+        "Built an AI-powered voice support agent capable of handling 100+ daily customer support calls with context-aware conversation flow",
+        "Designed and deployed a Node.js backend integrating VAPI and Gemini API for real-time, natural conversational intelligence",
+        "Integrated ElevenLabs for high-quality speech synthesis and Twilio API for automated phone call handling",
+      ],
+      technologies: ["Node.js", "VAPI", "Gemini API", "ElevenLabs", "Twilio", "Webhooks"],
+    },
   ];
 
   const responsibilities = [
