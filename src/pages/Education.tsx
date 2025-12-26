@@ -71,7 +71,7 @@ const Education = () => {
               <GraduationCap className="h-7 w-7 text-primary" />
               Academic Background
             </h3>
-            
+
             <div className="space-y-6">
               {education.map((edu, index) => (
                 <div
@@ -89,13 +89,9 @@ const Education = () => {
                           </span>
                         )}
                       </div>
-                      {edu.field && (
-                        <p className="text-primary font-medium">{edu.field}</p>
-                      )}
+                      {edu.field && <p className="text-primary font-medium">{edu.field}</p>}
                       <p className="text-muted-foreground mt-1">{edu.institution}</p>
-                      {edu.location && (
-                        <p className="text-muted-foreground text-sm">{edu.location}</p>
-                      )}
+                      {edu.location && <p className="text-muted-foreground text-sm">{edu.location}</p>}
                     </div>
                     <div className="text-right">
                       <p className="font-display text-2xl font-bold gradient-text">{edu.score}</p>
@@ -113,7 +109,7 @@ const Education = () => {
               <Award className="h-7 w-7 text-primary" />
               Certifications
             </h3>
-            
+
             <div className="grid sm:grid-cols-2 gap-6">
               {certifications.map((cert, index) => (
                 <div
@@ -136,7 +132,7 @@ const Education = () => {
               <Trophy className="h-7 w-7 text-primary" />
               Achievements & Awards
             </h3>
-            
+
             <div className="grid sm:grid-cols-2 gap-6">
               {achievements.map((achievement, index) => (
                 <div
