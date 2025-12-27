@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Download, Mail, Github, Linkedin, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useParallax, useMouseParallax } from "@/hooks/useParallax";
 
 const Index = () => {
+  const parallaxHero = useParallax({ speed: 0.3 });
+  const mousePosition = useMouseParallax(0.01);
+
   const scrollToContent = () => {
     window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
   };
@@ -10,10 +14,15 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center relative px-4">
-        <div className="container-main text-center space-y-8">
+      <section className="min-h-screen flex items-center justify-center relative px-4 overflow-hidden">
+        <div 
+          className="container-main text-center space-y-8"
+          style={{ 
+            transform: `translate(${mousePosition.x * 0.5}px, ${parallaxHero + mousePosition.y * 0.5}px)` 
+          }}
+        >
           {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 animate-fade-in-up hover-glow cursor-hover">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm text-primary font-medium">Available for Opportunities</span>
           </div>
@@ -21,7 +30,7 @@ const Index = () => {
           {/* Main Heading */}
           <div className="space-y-4 animate-fade-in-up animation-delay-100">
             <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Hi, I'm <span className="gradient-text">Mouleendra</span>
+              Hi, I'm <span className="gradient-text text-shimmer">Mouleendra</span>
             </h1>
             <p className="font-display text-xl sm:text-2xl md:text-3xl text-muted-foreground font-medium">
               Machine Learning Engineer, AI Developer & Data Engineer
