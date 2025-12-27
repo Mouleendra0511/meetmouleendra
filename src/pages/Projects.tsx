@@ -10,47 +10,58 @@ const Projects = () => {
   const projects = [
     {
       title: "AI-Driven Traffic Prediction and Management System",
-      description: "Developed an AI system that predicts traffic disruptions with over 92% accuracy using real-time, weather, and historical incident data. Designed and implemented intelligent route-suggestion logic, reducing estimated congestion by up to 35%.",
-      longDescription: "Integrated REST APIs with an interactive frontend to deliver live traffic updates and alert notifications to users.",
+      description:
+        "Developed an AI system that predicts traffic disruptions with over 92% accuracy using real-time, weather, and historical incident data. Designed and implemented intelligent route-suggestion logic, reducing estimated congestion by up to 35%.",
+      longDescription:
+        "Integrated REST APIs with an interactive frontend to deliver live traffic updates and alert notifications to users.",
       technologies: ["Python", "ML Models", "REST APIs", "HTML", "JavaScript", "CSS"],
       category: "Machine Learning",
       date: "Aug 2024",
       event: "Smart India Hackathon 2024",
       featured: true,
+      github: "https://github.com/Mouleendra0511/SIH",
+      live: "",
     },
     {
       title: "AI-Powered Voice Support Agent",
-      description: "Built a voice agent to handle 100+ daily support calls with context-aware conversation flow. Designed and deployed a backend with VAPI and Gemini for natural conversation flow.",
+      description:
+        "Built a voice agent to handle 100+ daily support calls with context-aware conversation flow. Designed and deployed a backend with VAPI and Gemini for natural conversation flow.",
       longDescription: "Integrated ElevenLabs for speech synthesis and Twilio API for phone call management.",
       technologies: ["Node.js", "VAPI", "Gemini API", "ElevenLabs", "Webhooks", "Twilio"],
       category: "AI/Automation",
       date: "May 2025",
       event: "Revive Startup",
       featured: true,
+      github: "",
+      live: "",
     },
     {
-      title: "CO Emission Prediction System",
-      description: "ML models achieving 92% accuracy to predict CO emissions using 20K+ blast furnace records with a web interface for real-time forecasting.",
-      technologies: ["Python", "Machine Learning", "Web Development", "Data Analysis"],
-      category: "Machine Learning",
-      date: "May-June 2024",
-      event: "RINL Internship",
+      title: "YouTube Comment Scraper & Sentiment Classifier",
+      description:
+        "Streamlit-based application that scrapes YouTube video comments using Selenium and classifies them as Good or Bad with Google Gemini 1.5 Pro, providing a real-time dashboard and CSV export of labeled comments.",
+      technologies: ["Python", "Streamlit", "Selenium", "Google Gemini API", "Pandas", "Natural Language Processing"],
+      category: "Machine Learning / NLP",
+      date: "April 2025",
+      event: "Personal / Academic Project",
+      github: "https://github.com/Mouleendra0511/youtube_comments",
     },
+
     {
       title: "Image Sharpening with Knowledge Distillation",
-      description: "Lightweight Teacher-Student model to enhance blurred images with SSIM of 0.91. Compressed model architecture for faster inference.",
+      description:
+        "Lightweight Teacher-Student model to enhance blurred images with SSIM of 0.91. Compressed model architecture for faster inference.",
       technologies: ["PyTorch", "Knowledge Distillation", "Computer Vision", "Deep Learning"],
       category: "Deep Learning",
       date: "May-July 2025",
       event: "Intel Unnati",
+      github: "https://github.com/Mouleendra0511/Intel-Unnati-TeamFOV2025",
+      live: "https://drive.google.com/file/d/1cdIcu0w-q2hLpb8gAl8Ryze25PKKWI48/view?usp=drive_link",
     },
   ];
 
   const categories = ["All", "Machine Learning", "AI/Automation", "Deep Learning"];
 
-  const filteredProjects = filter === "All" 
-    ? projects 
-    : projects.filter(p => p.category === filter);
+  const filteredProjects = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <div className="min-h-screen pt-24">
@@ -71,7 +82,7 @@ const Projects = () => {
                   "px-5 py-2.5 rounded-lg font-medium transition-all duration-300",
                   filter === category
                     ? "bg-primary text-primary-foreground"
-                    : "bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80"
+                    : "bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80",
                 )}
               >
                 {category}
@@ -86,7 +97,7 @@ const Projects = () => {
                 key={project.title}
                 className={cn(
                   "glass-card overflow-hidden group hover:border-primary/50 transition-all duration-500 animate-fade-in-up",
-                  project.featured && "ring-1 ring-primary/20"
+                  project.featured && "ring-1 ring-primary/20",
                 )}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
@@ -126,10 +137,7 @@ const Projects = () => {
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-2.5 py-1 rounded-md bg-secondary text-xs font-medium"
-                      >
+                      <span key={tech} className="px-2.5 py-1 rounded-md bg-secondary text-xs font-medium">
                         {tech}
                       </span>
                     ))}
@@ -141,12 +149,21 @@ const Projects = () => {
                       {project.category}
                     </span>
                     <div className="flex gap-2">
-                      <Button variant="ghost" size="icon" className="h-9 w-9">
-                        <Github className="h-4 w-4" />
-                      </Button>
-                      <Button variant="ghost" size="icon" className="h-9 w-9">
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
+                      {project.github && (
+                        <Button variant="ghost" size="icon" className="h-9 w-9" asChild>
+                          <a href={project.github} target="_blank" rel="noopener noreferrer">
+                            <Github className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      )}
+
+                      {project.live && (
+                        <Button variant="ghost" size="icon" className="h-9 w-9" asChild>
+                          <a href={project.live} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -156,15 +173,9 @@ const Projects = () => {
 
           {/* GitHub CTA */}
           <div className="text-center mt-16">
-            <p className="text-muted-foreground mb-4">
-              Want to see more of my work?
-            </p>
+            <p className="text-muted-foreground mb-4">Want to see more of my work?</p>
             <Button variant="heroOutline" size="lg" asChild>
-              <a
-                href="https://github.com/Mouleendra0511"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="https://github.com/Mouleendra0511" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
                 View GitHub Profile
               </a>
