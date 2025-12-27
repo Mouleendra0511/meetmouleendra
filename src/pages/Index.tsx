@@ -57,12 +57,12 @@ const Index = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center justify-center gap-4 pt-4 animate-fade-in-up animation-delay-400">
+          <div className="flex items-center justify-center gap-4 pt-4 animate-fade-in-up animation-delay-400 stagger-children">
             <a
               href="https://github.com/Mouleendra0511"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-xl bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300 hover:scale-110"
+              className="p-3 rounded-xl bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300 hover:scale-110 hover-glow cursor-hover"
               aria-label="GitHub"
             >
               <Github className="h-6 w-6" />
@@ -71,14 +71,14 @@ const Index = () => {
               href="https://www.linkedin.com/in/aithi-aditya-sai-mouleendra-b7349724b"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-xl bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300 hover:scale-110"
+              className="p-3 rounded-xl bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300 hover:scale-110 hover-glow cursor-hover"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-6 w-6" />
             </a>
             <a
               href="mailto:mouleendraaithi@gmail.com"
-              className="p-3 rounded-xl bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300 hover:scale-110"
+              className="p-3 rounded-xl bg-secondary hover:bg-primary/20 hover:text-primary transition-all duration-300 hover:scale-110 hover-glow cursor-hover"
               aria-label="Email"
             >
               <Mail className="h-6 w-6" />
@@ -108,7 +108,7 @@ const Index = () => {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="text-center space-y-2 animate-fade-in-up"
+                className="text-center space-y-2 animate-fade-in-up p-6 rounded-xl hover-glow card-lift cursor-hover"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <p className="font-display text-3xl md:text-4xl font-bold gradient-text">{stat.value}</p>
@@ -139,20 +139,20 @@ const Index = () => {
               <span
                 key={tech}
                 className="px-4 py-2 rounded-lg bg-secondary text-foreground text-sm font-medium 
-                         hover:bg-primary/20 hover:text-primary transition-all duration-300 cursor-default
-                         animate-fade-in-up"
+                         hover:bg-primary/20 hover:text-primary transition-all duration-300 cursor-hover
+                         animate-fade-in-up hover:scale-105"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                {tech}
-              </span>
-            ))}
-          </div>
-          <Button variant="outline" asChild>
-            <Link to="/skills">
-              View All Skills
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </Button>
+              {tech}
+            </span>
+          ))}
+        </div>
+        <Button variant="outline" asChild className="hover-glow cursor-hover">
+          <Link to="/skills">
+            View All Skills
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </Button>
         </div>
       </section>
     </div>
