@@ -76,9 +76,6 @@ export const Footer = () => {
 
         <div className="mt-10 pt-6 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <p>© 2025 Mouleendra. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Made with <Heart className="h-4 w-4 text-destructive fill-destructive" /> using React & Tailwind
-          </p>
         </div>
       </div>
     </footer>
