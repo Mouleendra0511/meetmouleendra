@@ -73,10 +73,6 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-
-        <div className="mt-10 pt-6 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© 2025 Mouleendra. All rights reserved.</p>
-        </div>
       </div>
     </footer>
   );
