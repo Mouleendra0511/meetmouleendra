@@ -15,10 +15,10 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative px-4 overflow-hidden">
-        <div 
+        <div
           className="container-main text-center space-y-8"
-          style={{ 
-            transform: `translate(${mousePosition.x * 0.5}px, ${parallaxHero + mousePosition.y * 0.5}px)` 
+          style={{
+            transform: `translate(${mousePosition.x * 0.5}px, ${parallaxHero + mousePosition.y * 0.5}px)`,
           }}
         >
           {/* Status Badge */}
@@ -152,16 +152,16 @@ const Index = () => {
                          animate-fade-in-up hover:scale-105"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-              {tech}
-            </span>
-          ))}
-        </div>
-        <Button variant="outline" asChild className="hover-glow cursor-hover">
-          <Link to="/skills">
-            View All Skills
-            <ArrowRight className="h-4 w-4" />
-          </Link>
-        </Button>
+                {tech}
+              </span>
+            ))}
+          </div>
+          <Button variant="outline" asChild className="hover-glow cursor-hover">
+            <Link to="/skills">
+              View All Skills
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </section>
     </div>
