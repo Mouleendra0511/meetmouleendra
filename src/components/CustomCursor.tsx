@@ -56,24 +56,14 @@ const CustomCursor = () => {
   }
 
   return (
-    <>
-      <div
-        className={`cursor-dot ${isHovering ? "hovering" : ""} ${isClicking ? "clicking" : ""}`}
-        style={{
-          left: position.x,
-          top: position.y,
-          opacity: isVisible ? 1 : 0,
-        }}
-      />
-      <div
-        className={`cursor-outline ${isHovering ? "hovering" : ""} ${isClicking ? "clicking" : ""}`}
-        style={{
-          left: position.x,
-          top: position.y,
-          opacity: isVisible ? 1 : 0,
-        }}
-      />
-    </>
+    <div
+      className={`fire-cursor ${isHovering ? "hovering" : ""} ${isClicking ? "clicking" : ""}`}
+      style={{
+        left: position.x,
+        top: position.y,
+        opacity: isVisible ? 1 : 0,
+      }}
+    />
   );
 };
 
