@@ -15,15 +15,41 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      subject: formData.get("subject") as string,
+      message: formData.get("message") as string,
+    };
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Something went wrong");
+      }
+
+      setIsSubmitted(true);
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+    } catch (error) {
+      toast({
+        title: "Failed to send message",
+        description: error instanceof Error ? error.message : "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
