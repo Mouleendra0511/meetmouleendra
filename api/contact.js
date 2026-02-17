@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const nodemailer = require("nodemailer");
+import mongoose from "mongoose";
+import nodemailer from "nodemailer";
 
 // --- Mongoose Model ---
 const contactSchema = new mongoose.Schema(
@@ -109,7 +109,7 @@ const sendEmail = async ({ name, email, subject, message }) => {
 };
 
 // --- Main Handler ---
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
     // CORS Headers
     // Allow all origins for simplicity in this case, or restrict to your Vercel domain
     res.setHeader("Access-Control-Allow-Credentials", true);
