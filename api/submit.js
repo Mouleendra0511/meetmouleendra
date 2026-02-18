@@ -132,10 +132,17 @@ export default async function handler(req, res) {
     }
 
     try {
+        if (!process.env.MONGO_URI) {
+            console.error("❌ MONGO_URI is not defined in environment variables");
+            return res.status(500).json({ success: false, message: "Server configuration error" });
+        }
+
         // Connect to DB
         await connectToDatabase();
 
         const { name, email, subject, message } = req.body;
+
+        console.log("📝 Received submission:", { name, email, subject, messageLength: message ? message.length : 0 });
 
         // Validate existence
         if (!name || !email || !subject || !message) {
@@ -150,8 +157,12 @@ export default async function handler(req, res) {
 
         // Send Email (non-blocking attempt)
         try {
-            await sendEmail({ name, email, subject, message });
-            console.log(`✉️  Email notification sent for contact from ${name}`);
+            if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+                await sendEmail({ name, email, subject, message });
+                console.log(`✉️  Email notification sent for contact from ${name}`);
+            } else {
+                console.warn("⚠️  Email credentials missing, skipping email notification");
+            }
         } catch (emailError) {
             console.error("⚠️  Email notification failed:", emailError.message);
             // We do not fail the request if email fails, as DB save was successful
@@ -177,7 +188,7 @@ export default async function handler(req, res) {
         console.error("❌ API Error:", error);
         res.status(500).json({
             success: false,
-            message: "Internal Server Error",
+            message: "Internal Server Error: " + error.message,
         });
     }
 };
