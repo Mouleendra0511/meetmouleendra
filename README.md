@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://meetmouleendra.lovable.app
+**URL**: https://meetmouleendra.vercel.app
 
 ## How can I edit this code?
 
